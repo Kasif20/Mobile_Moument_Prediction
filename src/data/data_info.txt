@@ -1,0 +1,21 @@
+Data processing:
+
+1.Replace the nanoseconds with seconds in the timestamp column, and remove the user column, because each user will perform the same action.
+
+2.Use the sliding window method to transform the data into sequences, and then split each label into training and testing sets, ensuring each label has 8:2 ratio in both the training and testing sets.
+
+3.Shuffle the order of the labels in both training and testing sets and interleave them to prevent two sequences with the same label from being consecutively lined up.
+
+Activity:
+
+0 = Downstairs 100,427 (9.1%)
+
+1 = Jogging 342,177 (31.2%)
+
+2 = Sitting 59,939 (5.5%)
+
+3 = Standing 48,395 (4.4%)
+
+4 = Upstair 122,869 (11.2%)
+
+5 = Walking 424,400 (38.6%)
