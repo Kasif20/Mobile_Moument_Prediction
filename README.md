@@ -169,15 +169,8 @@ After building and installing the extension on Termux run:
 
 ```bash
 cd Mobile-side
+uv add requests
 uv sync
-```
-Or Do It Manually
-
-```bash
-pkg install maturin
-bash script.sh
-maturin build --release
-uv pip install --python-platform aarch64-linux-android target/wheels/*.whl
 ```
 
 Update `Mobile-side/main.py` with the server IP address:
@@ -190,6 +183,17 @@ Then run the sensor client:
 
 ```bash
 uv run main.py
+```
+
+If you Fase Some Issue With uv build. One Can Alternatively, build a wheel manually and run the Python environment directly
+
+```bash
+pkg install maturin
+source script.sh
+maturin build --release
+uv pip intall requests
+uv pip install --python-platform aarch64-linux-android target/wheels/*.whl
+.venv/bin/python main.py
 ```
 
 ## License
