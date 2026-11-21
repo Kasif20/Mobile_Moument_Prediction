@@ -189,6 +189,7 @@ If you Fase Some Issue With uv build. One Can Alternatively, build a wheel manua
 
 ```bash
 pkg install maturin
+uv venv                 # only if .venv doesn't already exist
 source script.sh
 maturin build --release
 uv pip intall requests
